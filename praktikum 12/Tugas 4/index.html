@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4</title>
+    <script>
+        function image_picker(){
+            const list_image = ["pe1.png", "pe2.png", "pe3.png"];
+            let pilihan = document.getElementById("opsi").value;
+
+            if( pilihan == "foto1" ){
+                let select = list_image[0]; //pe1.png
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "foto2" ){
+                let select = list_image[1]; //pe2.png
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan =="foto3" ){
+                let select = list_image[2]; //pe3.png
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Picker</h1>
+
+    <select name="" id="opsi" onchange="image_picker()">
+        <option value=""> Pilih Gambar</option>
+        <option value="foto1"> foto1</option>
+        <option value="foto2"> foto2</opttion>
+        <option value="foto3"> foto3</option>    
+    </select>
+
+    <div class="countainer">
+        <img id="gambar">
+    </div>
+
+</body>
+</html>
